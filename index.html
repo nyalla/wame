@@ -18,7 +18,7 @@
 
   <body class="text-center">
     <form class="form-signin" id="myForm">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Please enter details</h1>
       <label for="inputPhonenumber" class="sr-only">Phone Number</label>
       <input type="text" id="inputPhonenumber" class="form-control" placeholder="Enter phone number" required autofocus>
       <label for="inputMessage" class="sr-only">Text to send</label>
@@ -35,7 +35,7 @@
 function myFunction() {
 	const phoneNumber =document.getElementById("inputPhonenumber").value;
 	const message =document.getElementById("inputMessage").value;
-	const newUrl = 'https://api.whatsapp.com/send/?phone=91'.concat(phoneNumber).'&text='.concat(message);
+	const newUrl = 'https://api.whatsapp.com/send/?phone=91'.concat(phoneNumber).concat('&text=').concat(message);
 	window.location.href=newUrl;
 }
 </script>
