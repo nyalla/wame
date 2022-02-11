@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.icon">
+
+    <title>WA me shortcut</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" id="myForm">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputPhonenumber" class="sr-only">Phone Number</label>
+      <input type="text" id="inputPhonenumber" class="form-control" placeholder="Enter phone number" required autofocus>
+      <label for="inputMessage" class="sr-only">Text to send</label>
+      <input type="text" id="inputMessage" class="form-control" placeholder="Message" required>
+      <div class="checkbox mb-3">
+        
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="reset" onClick="myFunction()">Open Whatsapp</button>
+      
+    </form>
+	
+	<script>
+ 
+function myFunction() {
+	const phoneNumber =document.getElementById("inputPhonenumber").value;
+	const message =document.getElementById("inputMessage").value;
+	const newUrl = 'https://api.whatsapp.com/send/?phone=91'.concat(phoneNumber).'&text='.concat(message);
+	window.location.href=newUrl;
+}
+</script>
+  </body>
+</html>
